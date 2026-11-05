@@ -1,0 +1,169 @@
+Actionable Detections: Closing the Gap Between Alerts and Decisions
+
+Most security teams don’t fail because they lack alerts.They fail because, in the moment that matters most, no one is confident what an alert actually means or what to do next.
+
+I’ve seen mature tools, extensive coverage, and highly capable analysts still struggle during incidents, not due to lack of detection, but due to uncertainty:
+
+Is this expected behavior? Is this risky or just unusual?
+
+Who owns the response?
+
+Do we escalate, or are we overreacting?
+
+These questions surface repeatedly across organizations of all sizes. They aren’t tool problems. They’re operating model problems.
+
+This post introduces Actionable Detections, not as a new taxonomy or maturity model, but as a practical way to ensure that when an alert fires, it reliably leads to a meaningful decision and response.
+
+The Problem: Detection Without Decision
+Over time, many security programs drift into a familiar pattern:
+Alerts are created faster than they are retired Baselines are implicit or undocumented
+
+Exceptions exist only in tribal knowledge
+
+Validation stops at “does the rule fire?”
+
+Response expectations are assumed, not tested
+
+The result is predictable:
+Alert fatigue in the SOC Friction with engineering teams
+
+Leadership frustration when incidents feel ambiguous
+
+Missed signals hidden in noise
+
+The industry often responds by adding tooling, coverage, or automation. While useful, those approaches rarely address the root issue:
+
+An alert that cannot confidently drive action is operational debt.
+
+Actionable Detections: A Simple Reframe
+Actionable Detections reframes detection engineering around a single question:
+
+When this alert fires, are we confident it represents a meaningful violation and know what action to take?
+
+If the answer is unclear, the detection is incomplete, regardless of how technically impressive it is.
+
+A Working Definition
+Actionable Detections are alerts that represent a validated violation of an approved baseline, are derived from threat modeling, and trigger a tested response that measurably reduces risk.
+
+This definition intentionally focuses on decision quality, not alert volume.
+
+The Actionable Detections Operating Model
+1. Baseline First
+You cannot detect a violation without defining what “normal” and “approved” behavior looks like.
+
+Baselines should be:
+
+ Explicit Documented
+
+Agreed upon with system owners
+
+If behavior is expected but undocumented, that’s a governance gap, not a detection failure.
+
+2. Violation-Driven Detection
+Detections should focus on meaningful deviations, not artifacts.
+
+Threat modeling helps answer:
+
+ What behavior would represent abuse of trust? 
+
+What outcomes would meaningfully increase risk?
+
+This shifts detection from “interesting activity” to intent-driven violations.
+
+3. Telemetry-Backed Hypotheses
+Every detection begins as a hypothesis:
+
+ What behavior do we expect to see?
+
+What logs are required to observe it?
+
+What assumptions are we making?
+
+Missing telemetry doesn’t invalidate a detection, it defines its confidence.
+
+4. Validation Before Promotion
+Before a detection reaches production, it should be validated:
+
+Through breach and attack simulation Controlled misuse scenarios
+
+Historical event replay
+
+If a detection hasn’t been tested, it hasn’t earned trust.
+
+5. Response-Aware by Design
+An alert without a response is noise.
+
+Each detection should answer:
+
+ Who owns this? What action should be taken?
+
+What does “done” look like?
+
+Response doesn’t have to be automated, it must be intentional.
+
+6. Engineering Operational Resilience
+Actionable Detections is intentionally iterative.
+
+Detections are treated as living hypotheses:
+
+ Failures are expected Noise is feedback
+
+Lessons feed refinement
+
+This allows detection programs to adapt to:
+
+ New attacker behavior Changes in business operations
+
+Evolving engineering practices
+
+Why This Isn’t “Yet Another Framework”
+Actionable Detections doesn’t replace:
+
+ MITRE ATT&CK Detection-as-code
+
+Purple teaming
+
+SOC maturity models
+
+It connects them.
+
+ATT&CK helps structure what attackers do. Detection engineering defines how detections are built. Purple teaming validates coverage.
+
+Actionable Detections focuses on what often gets missed:
+
+When does an alert deserve human attention and why?
+
+A Practical Example
+Consider a detection for privileged access being granted after hours.
+
+ If this happens frequently and is expected, the baseline is incomplete. If it’s rare and undocumented, it’s a meaningful violation. Validation confirms the detection fires reliably. Response confirms whether access is still required and removes it when it isn’t.
+
+Even if no breach occurred, value was delivered:
+
+ Risk exposure was reduced
+
+Process gaps were identified
+
+Futture ambiguity was eliminated
+
+That’s success and not overreaction.
+
+Why This Matters
+Security incidents rarely fail because controls didn’t exist.They fail because decisions were delayed, unclear, or disputed.
+
+Actionable Detections improves:
+
+Trust in alerts Collaboration with engineering
+
+Confidence during incidents
+
+Clarity for leadership
+
+Most importantly, it shifts detection from signal generation to decision enablement.
+
+Closing Thought
+Actionable Detections isn’t about perfection or zero alerts. It’s about ensuring that when something fires at 2 a.m., the organization can answer quickly and confidently:
+
+Is this real, does it matter, and what should we do next?
+
+If your detection program can do that consistently, it’s doing its job.
