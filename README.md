@@ -28,12 +28,13 @@ Security Analysis | Security Engineering | Security Architecture
 ### security-architecture-lab	              
 ### threat-modeling-case-studies	              
 ### detection-engineering-lab
+<!--
 ####https://github.com/infosecB/awesome-detection-engineering
 ####https://www.blackhillsinfosec.com/at-home-detection-engineering-lab-for-beginners/
 ### cloud-security-lab	                       
 ### vulnerability-management-lab
 ### security-automation
-
+-->
 ## Security Focus Areas
 
 ### Security Analysis
